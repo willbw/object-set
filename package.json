@@ -1,0 +1,14 @@
+{
+  "name": "object-set",
+  "version": "0.0.1",
+  "description": "Set data structure based on object values",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Will Wright",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.10"
+  }
+}
