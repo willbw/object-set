@@ -7,9 +7,11 @@ Creating a new set
 const ObjectSet = require('object-set').ObjectSet;
 
 // creates a new, empty object set
+
 let os = new ObjectSet;
+
 // creates a new object set and add the items in the array to the set
-//(duplicates will be filtered out)
+// (duplicates will be filtered out)
 os = new ObjectSet([ { a : 1 }, { a : 2 }, { a : 3 } ])
 ```
 
@@ -17,7 +19,8 @@ Adding to the set
 ```javascript
 os.add({ a: 4 });
 // returns true
-// os is now contains { a : 1 }, { a : 2 }, { a : 3 } and { a : 4 } 
+// os now contains { a : 1 }, { a : 2 }, { a : 3 } and { a : 4 } 
+
 os.add({ a: 4 });
 // returns false
 // os still contains { a : 1 }, { a : 2 }, { a : 3 } and { a : 4 }  as { a : 4 } was in the set
@@ -25,20 +28,21 @@ os.add({ a: 4 });
 
 Adding items in an array to the set
 ```javascript
-// functions much the same as adding a single item, but iterates through the array
+// functions much the same as adding a single item
+// iterates through the array of objects, adding the objects to our set
 os.addAll([ { a : 1 }, { a : 2 }, { a : 3 } ]);
 ```
 
 Getting the index of an object in the set
 ```javascript
-let indexInSet = os.indexOf({ a: 2 });
 // returns -1 if not found, or the index if found
+let indexInSet = os.indexOf({ a: 2 });
 ```
 
 Removing an item from the set
 ```javascript
-os.delete({a : 1});
 // returns true if in the set, false if not
+os.delete({a : 1});
 ```
 
 Clearing the set
@@ -48,14 +52,14 @@ os.clear();
 
 Checking whether an object is a member of the set
 ```javascript
-os.has({a : 1});
 // returns true if a member, false if not
+os.has({a : 1});
 ```
 
 Checking whether all items in an array are members
 ```javascript
-os.hasAll([ { a : 1 }, { a : 2 }, { a : 3 } ]);
 // returns true if all are members, false if not
+os.hasAll([ { a : 1 }, { a : 2 }, { a : 3 } ]);
 ```
 
 Getting the size of the set
