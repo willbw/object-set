@@ -9,6 +9,7 @@
   "author": "Will Wright",
   "license": "ISC",
   "dependencies": {
-    "lodash": "^4.17.10"
+    "lodash": "^4.17.10",
+    "object-hash": "^1.3.0"
   }
 }
